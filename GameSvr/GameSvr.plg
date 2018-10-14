@@ -1,0 +1,203 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GameSvr - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo"../_Obj_Debug/GameSvr/GameSvr.res" /d "_DEBUG" "E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\GameSvr.rc"" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPFAA8.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GR /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /FR"../_Obj_Debug/GameSvr/" /Fp"../_Obj_Debug/GameSvr/GameSvr.pch" /Yu"stdafx.h" /Fo"../_Obj_Debug/GameSvr/" /Fd"../_Obj_Debug/GameSvr/" /FD /GZ /c 
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ConfigDlgFunc.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\Def\_OrzEx\database.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\GameSvr.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\GateInfo.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\Global.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\Handler_CommonDB.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\Handler_Item.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\Handler_Magic.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\Handler_Map.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\MainWndProc.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\Def\Misc.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectEngine.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectEvent.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectMerchant.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectMonster.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectNPC.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectPlayer.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectPlayerAdmin.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectPlayerAdminSaid.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectPlayerClone.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectPlayerSaid.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ObjectScripter.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ProcessEvents.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ProcessLogin.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ProcessMerchants.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ProcessMonster.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ProcessNPC.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ProcessUserHuman.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ProcessUserMsg.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\SockMsg_DBSrv.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\SockMsg_GateComm.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\SockMsg_LogSvr.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\ThreadFuncForComm.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\UserInfo.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\Def\EnDecode.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\Def\RegstryHandler.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\Def\ServerSockHandler.cpp"
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\Def\_OrzEx\syncobj.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPFAA8.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPFAB8.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GR /GX /ZI /Od /D "_DEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /FR"../_Obj_Debug/GameSvr/" /Fp"../_Obj_Debug/GameSvr/GameSvr.pch" /Yc"stdafx.h" /Fo"../_Obj_Debug/GameSvr/" /Fd"../_Obj_Debug/GameSvr/" /FD /GZ /c 
+"E:\work\mir3_server\mir3_src\LegendOfMir3_Server\GameSvr\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPFAB8.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPFAB9.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"../_Bin/Debug/GameSvr.pdb" /debug /machine:I386 /out:"../_Bin/Debug/GameSvr.exe" /pdbtype:sept 
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ConfigDlgFunc.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\database.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\GameSvr.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\GateInfo.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Global.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Handler_CommonDB.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Handler_Item.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Handler_Magic.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Handler_Map.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\MainWndProc.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Misc.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectEngine.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectEvent.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectMerchant.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectMonster.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectNPC.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayer.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayerAdmin.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayerAdminSaid.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayerClone.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayerSaid.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectScripter.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessEvents.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessLogin.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessMerchants.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessMonster.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessNPC.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessUserHuman.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessUserMsg.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\SockMsg_DBSrv.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\SockMsg_GateComm.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\SockMsg_LogSvr.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\StdAfx.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ThreadFuncForComm.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\UserInfo.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\EnDecode.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\RegstryHandler.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ServerSockHandler.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\syncobj.obj
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\GameSvr.res
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPFAB9.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ConfigDlgFunc.cpp
+database.cpp
+GameSvr.cpp
+GateInfo.cpp
+Global.cpp
+Handler_CommonDB.cpp
+Handler_Item.cpp
+Handler_Magic.cpp
+Handler_Map.cpp
+MainWndProc.cpp
+Misc.cpp
+ObjectEngine.cpp
+ObjectEvent.cpp
+ObjectMerchant.cpp
+ObjectMonster.cpp
+ObjectNPC.cpp
+ObjectPlayer.cpp
+ObjectPlayerAdmin.cpp
+ObjectPlayerAdminSaid.cpp
+ObjectPlayerClone.cpp
+Generating Code...
+Compiling...
+ObjectPlayerSaid.cpp
+ObjectScripter.cpp
+ProcessEvents.cpp
+ProcessLogin.cpp
+ProcessMerchants.cpp
+ProcessMonster.cpp
+ProcessNPC.cpp
+ProcessUserHuman.cpp
+ProcessUserMsg.cpp
+SockMsg_DBSrv.cpp
+SockMsg_GateComm.cpp
+SockMsg_LogSvr.cpp
+ThreadFuncForComm.cpp
+UserInfo.cpp
+EnDecode.cpp
+RegstryHandler.cpp
+ServerSockHandler.cpp
+syncobj.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSP516.tmp" with contents
+[
+/nologo /o"../_Bin/Debug/GameSvr.bsc" 
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\StdAfx.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ConfigDlgFunc.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\database.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\GameSvr.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\GateInfo.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Global.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Handler_CommonDB.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Handler_Item.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Handler_Magic.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Handler_Map.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\MainWndProc.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\Misc.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectEngine.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectEvent.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectMerchant.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectMonster.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectNPC.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayer.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayerAdmin.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayerAdminSaid.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayerClone.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectPlayerSaid.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ObjectScripter.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessEvents.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessLogin.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessMerchants.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessMonster.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessNPC.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessUserHuman.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ProcessUserMsg.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\SockMsg_DBSrv.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\SockMsg_GateComm.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\SockMsg_LogSvr.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ThreadFuncForComm.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\UserInfo.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\EnDecode.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\RegstryHandler.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\ServerSockHandler.sbr
+\work\mir3_server\mir3_src\LegendOfMir3_Server\_Obj_Debug\GameSvr\syncobj.sbr]
+Creating command line "bscmake.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSP516.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+GameSvr.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
