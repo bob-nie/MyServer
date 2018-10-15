@@ -118,4 +118,5 @@ typedef struct tag_TSENDBUFF
 
 void InsertLogMsg(UINT nID);
 void InsertLogMsg(LPTSTR lpszMsg);
+void InsertLog(char* pszMsg);
 void InsertLogMsgParam(UINT nID, void *pParam, BYTE btFlags = LOGPARAM_STR);

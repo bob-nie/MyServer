@@ -150,6 +150,14 @@ DWORD WINAPI ServerWorkerThread(LPVOID CompletionPortID)
 		{
 			*(pGateInfo->ExtractPacket( szTmp ) - 1) = '\0';
 
+			TCHAR log[50];
+
+			MultiByteToWideChar(CP_ACP,0,szTmp,-1,log,sizeof(log));
+
+			InsertLogMsg(log);
+
+
+
 			switch ( szTmp[1] )
 			{
 				case '-':

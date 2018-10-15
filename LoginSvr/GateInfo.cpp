@@ -271,9 +271,21 @@ void CGateInfo::ReceiveSendUser(char *pszPacket)
 	int		nSocket;
 	int		nLen = memlen(pszPacket);
 
+	InsertLog(pszPacket);
+
+
+
 	if ((pszPos = (char *)memchr(pszPacket, '/', nLen)))
 	{
+		//*pszPos = '\0';
+		
 		nSocket = AnsiStrToVal(pszPacket);
+
+		char socket[10];
+		ValToAnsiStr(nSocket,socket);
+
+
+		InsertLog(socket);
 
 		pszPos++;
 
@@ -282,6 +294,9 @@ void CGateInfo::ReceiveSendUser(char *pszPacket)
 		lpSendUserData->sock		= (SOCKET)nSocket;
 
 		memmove(lpSendUserData->szData, pszPos, memlen(pszPos));
+
+
+		InsertLog(lpSendUserData->szData);
 
 		g_SendToGateQ.PushQ((BYTE *)lpSendUserData);
 	}
@@ -524,6 +539,8 @@ void CGateInfo::ProcLogin(SOCKET s, char *pszData)
 
 			pszID		= &szIDPassword[0];
 
+			InsertLog(pszID);
+
 			if (pszPassword	= (char *)memchr(szIDPassword, '/', sizeof(szIDPassword)))
 			{
 				*pszPassword = '\0';
@@ -534,11 +551,14 @@ void CGateInfo::ProcLogin(SOCKET s, char *pszData)
 				CRecordset *pRec = GetDBManager()->CreateRecordset();
 
 				if ( !pRec->Execute( szQuery ) || !pRec->Fetch() )
-					fnMakeDefMessageA( &DefMsg, SM_ID_NOTFOUND, 0, 0, 0, 0 );
+				{fnMakeDefMessageA( &DefMsg, SM_ID_NOTFOUND, 0, 0, 0, 0 );
+				InsertLog("id not found");}
 				else if ( CompareDBString( pszPassword, pRec->Get( "FLD_PASSWORD" ) ) != 0 )
-					fnMakeDefMessageA( &DefMsg, SM_PASSWD_FAIL, 0, 0, 0, 0 );
+				{fnMakeDefMessageA( &DefMsg, SM_PASSWD_FAIL, 0, 0, 0, 0 );
+				InsertLog("passwd fail");}
 				else
 				{
+InsertLog("id right");
 					int nCertCode = atoi( pRec->Get( "FLD_CERTIFICATION" ) );
 		/*
 					if ( nCertCode > 0 && nCertCode < 30 )

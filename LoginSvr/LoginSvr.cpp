@@ -257,6 +257,23 @@ void InsertLogMsg(LPTSTR lpszMsg)
 	}
 }
 
+void InsertLog(char* pszMsg)
+{
+	int nCount = AddNewLogMsg();
+
+	if (strlen(pszMsg) <= 256)
+	{
+		TCHAR log[250];
+
+		MultiByteToWideChar(CP_ACP,0,pszMsg,-1,log,sizeof(log));
+		ListView_SetItemText(g_hLogMsgWnd, nCount, 2, log);
+		ListView_Scroll(g_hLogMsgWnd, 0, 8);
+	}
+}
+
+
+
+
 void InsertLogMsgParam(UINT nID, void *pParam, BYTE btFlags)
 {
 	TCHAR	szText[128];

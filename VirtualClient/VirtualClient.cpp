@@ -4,6 +4,8 @@
 
 #include "resource.h"
 
+#include <stdio.h>
+
 // **************************************************************************************
 
 BOOL	InitApplication(HANDLE hInstance);
@@ -184,8 +186,38 @@ BOOL InitInstance(HANDLE hInstance, int nCmdShow)
 
 
 	ConnectServer(g_sock, &g_addr, _IDM_SOCKMSG, g_szServerIP, 0, 7000, FD_CONNECT|FD_READ|FD_CLOSE);
+	
+	_TDEFAULTMESSAGE	DefMsg;
+	char				szEncodePacket[64];
+	char szEncodeServerList[512];
+	char szEncodeAllPacket[1024] = "#?";
+	char IdPwd[20] = "1/nwz";
+	
+	fnMakeDefMessageA(&DefMsg, CM_IDPASSWORD, 0, 1, 0, 0);		
+	int nPos = fnEncodeMessageA(&DefMsg, szEncodePacket, sizeof(szEncodePacket));
+	szEncodePacket[nPos] = '\0';
 
-	send(g_sock,"#?nwz/nwz!",32,0);
+	char log1[100];
+
+	sprintf(log1,"nPos is %d,szEncodePacket is %s",nPos,szEncodePacket);
+	InsertLogMsg(log1);
+	
+	int nPos2 = fnEncode6BitBufA((unsigned char *)IdPwd, szEncodeServerList, memlen(IdPwd), sizeof(szEncodeServerList));
+	szEncodeServerList[nPos2] = '\0';
+
+	char log2[100];
+
+	sprintf(log2,"nPos2 is %d,szEncodeServerList is %s",nPos2,szEncodeServerList);
+	InsertLogMsg(log2);
+	
+	memmove(&szEncodeAllPacket[2], szEncodePacket, nPos);
+	memmove(&szEncodeAllPacket[nPos+2], szEncodeServerList, nPos2);
+	szEncodeAllPacket[2+nPos+nPos2]='!';
+	szEncodeAllPacket[3+nPos+nPos2]='\0';
+
+	InsertLogMsg(szEncodeAllPacket);
+	
+	send(g_sock,szEncodeAllPacket,200,0);
 
 	return TRUE;
 }

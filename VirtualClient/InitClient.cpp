@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+#include <stdio.h>
+
 void InsertLogMsg(LPTSTR lpszMsg);
 
 extern HINSTANCE		g_hInst;
@@ -59,13 +61,51 @@ LRESULT OnSockMsg(WPARAM wParam, LPARAM lParam)
 		}
 		case FD_READ:
 		{
-			char	szMsg[4096];
+			char	szMsg[4096] = "nwz";
 
 			int nLen = recv((SOCKET)wParam, szMsg, sizeof(szMsg), 0);
 
 			szMsg[nLen] = '\0';
-
+			
 			InsertLogMsg(szMsg);
+			
+			char log[200];
+			
+			_TDEFAULTMESSAGE	DefaultMsg;
+			
+			char* pszBegin; 
+			char* pszEnd;
+
+			if((pszBegin = (char *)memchr(szMsg, '#', memlen(szMsg))) && (pszEnd = (char *)memchr(szMsg, '!', memlen(szMsg))))
+			{
+			InsertLogMsg(pszBegin);
+			InsertLogMsg(pszEnd);
+
+			*pszEnd='\0';
+
+
+			fnDecodeMessageA(&DefaultMsg, (pszBegin + 2));
+
+
+			/*
+			char				szIDPassword[32];
+			
+			  int nDecodeLen = fnDecode6BitBufA(pszBegin+18, szIDPassword, sizeof(szIDPassword));
+			  szIDPassword[nDecodeLen] = '\0';
+			  
+				
+				
+				  sprintf(log,"Msg is %d,data is %s",DefaultMsg.wIdent,szIDPassword);
+			*/
+
+			sprintf(log,"Msg is %d",DefaultMsg.wIdent);
+			
+			InsertLogMsg(log);
+
+			}
+			
+			
+
 
 			break;
 		}
