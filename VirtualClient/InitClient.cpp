@@ -67,7 +67,7 @@ LRESULT OnSockMsg(WPARAM wParam, LPARAM lParam)
 
 			szMsg[nLen] = '\0';
 			
-			InsertLogMsg(szMsg);
+			//InsertLogMsg(szMsg);
 			
 			char log[200];
 			
@@ -79,12 +79,18 @@ LRESULT OnSockMsg(WPARAM wParam, LPARAM lParam)
 			if((pszBegin = (char *)memchr(szMsg, '#', memlen(szMsg))) && (pszEnd = (char *)memchr(szMsg, '!', memlen(szMsg))))
 			{
 			InsertLogMsg(pszBegin);
-			InsertLogMsg(pszEnd);
+			//InsertLogMsg(pszEnd);
 
 			*pszEnd='\0';
 
 
-			fnDecodeMessageA(&DefaultMsg, (pszBegin + 2));
+			fnDecodeMessageA(&DefaultMsg, (pszBegin + 1));
+
+			char log2[200];
+
+			fnDecode6BitBufA(pszBegin+17,log2,sizeof(log2));
+
+
 
 
 			/*
@@ -101,6 +107,8 @@ LRESULT OnSockMsg(WPARAM wParam, LPARAM lParam)
 			sprintf(log,"Msg is %d",DefaultMsg.wIdent);
 			
 			InsertLogMsg(log);
+
+			InsertLogMsg(log2);
 
 			}
 			

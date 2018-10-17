@@ -573,12 +573,18 @@ InsertLog("id right");
 						fnMakeDefMessageA(&DefMsg, SM_PASSOK_SELECTSERVER, 0, 1, 0, 0);		
 						nPos = fnEncodeMessageA(&DefMsg, szEncodePacket, sizeof(szEncodePacket));
 						szEncodePacket[nPos] = '\0';
+
+						InsertLog(g_szServerList);
 						
 						int nPos2 = fnEncode6BitBufA((unsigned char *)g_szServerList, szEncodeServerList, memlen(g_szServerList), sizeof(szEncodeServerList));
 						szEncodeServerList[nPos2] = '\0';
+
+						InsertLog(szEncodeServerList);
 						
 						memmove(szEncodeAllPacket, szEncodePacket, nPos);
 						memmove(&szEncodeAllPacket[nPos], szEncodeServerList, memlen(szEncodeServerList));
+
+						InsertLog(szEncodeAllPacket);
 						
 						SendToGate(s, szEncodeAllPacket);
 										

@@ -160,22 +160,22 @@ DWORD WINAPI ServerWorkerThread(LPVOID CompletionPortID)
 
 			switch ( szTmp[1] )
 			{
-				case '-':
+				case '-':   //与gate保持心跳
 					pGateInfo->SendKeepAlivePacket();
 					break;
-				case 'A':
+				case 'A':    //收到login gate发来的消息，做对应的处理，主要是验密、选择服务器等
 					pGateInfo->ReceiveSendUser(&szTmp[2]);
 					break;
-				case 'O':
+				case 'O':    //收到login gate发来的消息，当客户端连接时，发送一条这样的消息
 					pGateInfo->ReceiveOpenUser(&szTmp[2]);
 					break;
-				case 'X':
+				case 'X':     //收到login gate发来的消息，当客户端与login gate通讯异常时发来
 					pGateInfo->ReceiveCloseUser(&szTmp[2]);
 					break;
-				case 'S':
+				case 'S':   //根据game server发来的消息更新用户登录状态，如在游戏中退出
 					pGateInfo->ReceiveServerMsg(&szTmp[2]);
 					break;
-				case 'M':
+				case 'M':     //创建用户，暂不清楚是哪个服务发来的消息
 					pGateInfo->MakeNewUser(&szTmp[2]);
 					break;
 			}
